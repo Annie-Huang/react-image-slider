@@ -1,0 +1,8 @@
+How To Create 3 Levels Of React Image Sliders - Beginner, Intermediate, Expert (https://www.youtube.com/watch?v=Kx8XlKRBZx8)
+
+https://github.com/WebDevSimplified/react-image-slider
+https://github.com/Annie-Huang/react-image-slider
+
+====================================================================================
+
+PS C:\react> npm create vite@latest react-image-slider -- --template react-ts
