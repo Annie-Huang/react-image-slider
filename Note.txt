@@ -6,3 +6,4 @@ https://github.com/Annie-Huang/react-image-slider
 ====================================================================================
 
 PS C:\react> npm create vite@latest react-image-slider -- --template react-ts
+PS C:\react\react-image-slider> npm i lucide-react
