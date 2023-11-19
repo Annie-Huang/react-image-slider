@@ -3,20 +3,20 @@ import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from 'lucide-react';
 import './image-slider.css';
 
 type ImageSliderProps = {
-  imageUrls: string[];
+  images: { url: string; alt: string }[];
 };
-export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
+export const ImageSlider = ({ images }: ImageSliderProps) => {
   const [imageIndex, setImageIndex] = useState(0);
 
   const showNextImage = () => {
     setImageIndex((index) => {
-      if (index === imageUrls.length - 1) return 0;
+      if (index === images.length - 1) return 0;
       return index + 1;
     });
   };
   const showPrevImage = () => {
     setImageIndex((index) => {
-      if (index === 0) return imageUrls.length - 1;
+      if (index === 0) return images.length - 1;
       return index - 1;
     });
   };
@@ -31,7 +31,7 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
           overflow: 'hidden',
         }}
       >
-        {imageUrls.map((url) => (
+        {images.map(({ url, alt }) => (
           <img
             key={url}
             src={url}
@@ -66,7 +66,7 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
           gap: '0.25rem',
         }}
       >
-        {imageUrls.map((_, index) => (
+        {images.map((_, index) => (
           <button
             key={index}
             className='img-slider-dot-btn'

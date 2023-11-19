@@ -5,7 +5,13 @@ import car4 from './imgs/car-4.jpg';
 import car5 from './imgs/car-5.jpg';
 import { ImageSlider } from './ImageSlider.tsx';
 
-const IMAGES = [car1, car2, car3, car4, car5];
+const IMAGES = [
+  { url: car1, alt: 'Car One' },
+  { url: car2, alt: 'Car Two' },
+  { url: car3, alt: 'Car Three' },
+  { url: car4, alt: 'Car Four' },
+  { url: car5, alt: 'Car Five' },
+];
 
 function App() {
   return (
@@ -17,7 +23,7 @@ function App() {
         margin: '0 auto',
       }}
     >
-      <ImageSlider imageUrls={IMAGES} />
+      <ImageSlider images={IMAGES} />
     </div>
   );
 }
