@@ -47,7 +47,7 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
         style={{ left: 0 }}
         aria-label='View Previous Image'
       >
-        <ArrowBigLeft />
+        <ArrowBigLeft aria-hidden />
       </button>
       <button
         onClick={showNextImage}
@@ -55,7 +55,7 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
         style={{ right: 0 }}
         aria-label='View Next Image'
       >
-        <ArrowBigRight />
+        <ArrowBigRight aria-hidden />
       </button>
       <div
         style={{
@@ -74,7 +74,11 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
             onClick={() => setImageIndex(index)}
             aria-label={`View Image ${index + 1}`}
           >
-            {index === imageIndex ? <CircleDot /> : <Circle />}
+            {index === imageIndex ? (
+              <CircleDot aria-hidden />
+            ) : (
+              <Circle aria-hidden />
+            )}
           </button>
         ))}
       </div>
