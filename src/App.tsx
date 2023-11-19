@@ -8,7 +8,18 @@ import { ImageSlider } from './ImageSlider.tsx';
 const IMAGES = [car1, car2, car3, car4, car5];
 
 function App() {
-  return <ImageSlider imageUrls={IMAGES} />;
+  return (
+    <div
+      style={{
+        maxWidth: '1200px',
+        width: '100%',
+        height: '500px',
+        margin: '0 auto',
+      }}
+    >
+      <ImageSlider imageUrls={IMAGES} />
+    </div>
+  );
 }
 
 export default App;
