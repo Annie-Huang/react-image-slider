@@ -23,9 +23,11 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
 
   return (
     <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-      {imageUrls.map((url) => (
-        <img key={url} src={url} className='img-slider-img' />
-      ))}
+      <div style={{ width: '100%', height: '100%', display: 'flex' }}>
+        {imageUrls.map((url) => (
+          <img key={url} src={url} className='img-slider-img' />
+        ))}
+      </div>
       <button
         onClick={showPrevImage}
         className='img-slider-btn'
