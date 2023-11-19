@@ -14,8 +14,8 @@
   flex-shrink: 0;
   flex-grow: 0;
 
-  /* Add animation */
-  transition: translate 300ms ease-in-out;
+  /* Add animation, only do it when user don't have prefers-reduce-motion (at the end) */
+  /*transition: translate 300ms ease-in-out;*/
 }
 
 .img-slider-btn {
@@ -103,4 +103,13 @@
   text-decoration: none;
   color: black;
   z-index: 100;
+}
+
+/* Only do it when user don't have prefers-reduced-motion.
+   This can be set in chrom dev tool, Control+Shift+P, then type 'prefers-reduced-motion'
+*/
+@media not (prefers-reduced-motion) {
+  .img-slider-img {
+    transition: translate 300ms ease-in-out;
+  }
 }
