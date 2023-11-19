@@ -54,6 +54,11 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
       >
         <ArrowBigRight />
       </button>
+      <div>
+        {imageUrls.map((_, index) => (
+          <button onClick={() => setImageIndex(index)}>{index}</button>
+        ))}
+      </div>
     </div>
   );
 };
