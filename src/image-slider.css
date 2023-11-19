@@ -13,6 +13,9 @@
   /* To make sure the image remain full size when sliding in the flex row */
   flex-shrink: 0;
   flex-grow: 0;
+
+  /* Add animation */
+  transition: translate 300ms ease-in-out;
 }
 
 .img-slider-btn {
