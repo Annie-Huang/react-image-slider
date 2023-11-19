@@ -22,7 +22,10 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+    <section
+      aria-label='Image Slider'
+      style={{ width: '100%', height: '100%', position: 'relative' }}
+    >
       <div
         style={{
           width: '100%',
@@ -83,6 +86,6 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
           </button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
