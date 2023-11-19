@@ -35,6 +35,7 @@ export const ImageSlider = ({ images }: ImageSliderProps) => {
           <img
             key={url}
             src={url}
+            alt={alt}
             className='img-slider-img'
             style={{ translate: `${-100 * imageIndex}%` }}
           />
