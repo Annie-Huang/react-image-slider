@@ -13,7 +13,7 @@ function App() {
       style={{
         maxWidth: '1200px',
         width: '100%',
-        height: '500px',
+        aspectRatio: '10 / 6',
         margin: '0 auto',
       }}
     >
