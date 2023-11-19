@@ -1,6 +1,20 @@
+import { useState } from 'react';
+import { ArrowBigLeft, ArrowBigRight } from 'lucide-react';
+
 type ImageSliderProps = {
   imageUrls: string[];
 };
 export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
-  return <div></div>;
+  const [imageIndex, setImageIndex] = useState(0);
+  return (
+    <div>
+      <img src={imageUrls[imageIndex]} alt='' />
+      <button>
+        <ArrowBigLeft />
+      </button>
+      <button>
+        <ArrowBigRight />
+      </button>
+    </div>
+  );
 };
