@@ -44,6 +44,7 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
         onClick={showPrevImage}
         className='img-slider-btn'
         style={{ left: 0 }}
+        aria-label='View Previous Image'
       >
         <ArrowBigLeft />
       </button>
@@ -51,6 +52,7 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
         onClick={showNextImage}
         className='img-slider-btn'
         style={{ right: 0 }}
+        aria-label='View Next Image'
       >
         <ArrowBigRight />
       </button>
@@ -69,6 +71,7 @@ export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
             key={index}
             className='img-slider-dot-btn'
             onClick={() => setImageIndex(index)}
+            aria-label={`View Image ${index + 1}`}
           >
             {index === imageIndex ? <CircleDot /> : <Circle />}
           </button>
