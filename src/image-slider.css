@@ -49,3 +49,18 @@
     scale: 1.4 0.6; /* 1.4 in x-axis and 0.6 in y-axis */
   }
 }
+
+.img-slider-dot-btn {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.img-slider-dot-btn > * {
+  stroke: white;
+  fill: black;
+  height: 100%;
+  width: 100%;
+}
