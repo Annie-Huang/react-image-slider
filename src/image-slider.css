@@ -88,3 +88,19 @@
   border: 0;
   clip: rect(0, 0, 0, 0);
 }
+
+/* Make it visible when use tab into it */
+.skip-link:focus-visible {
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  background-color: white;
+  padding: 0.5rem;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: unset;
+  text-decoration: none;
+  color: black;
+  z-index: 100;
+}
