@@ -28,8 +28,12 @@
   cursor: pointer;
   transition: background-color 100ms ease-in-out;
 }
+
 .img-slider-btn:hover {
   background-color: rgb(0, 0, 0, 0.2);
+}
+.img-slider-btn:hover > * {
+  animation: squish 200ms ease-in-out;
 }
 
 .img-slider-btn > * {
@@ -37,4 +41,11 @@
   fill: black;
   width: 2rem;
   height: 2rem;
+}
+
+/* Very nice animation */
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6; /* 1.4 in x-axis and 0.6 in y-axis */
+  }
 }
