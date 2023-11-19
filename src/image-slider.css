@@ -33,10 +33,13 @@
 .img-slider-btn:focus-visible {
   background-color: rgb(0, 0, 0, 0.2);
 }
+/* Only have this section when user don't have prefers-reduced-motion */
+/*
 .img-slider-btn:hover > *,
 .img-slider-btn:focus-visible > * {
   animation: squish 200ms ease-in-out;
 }
+*/
 
 .img-slider-btn > * {
   stroke: white;
@@ -111,5 +114,10 @@
 @media not (prefers-reduced-motion) {
   .img-slider-img {
     transition: translate 300ms ease-in-out;
+  }
+
+  .img-slider-btn:hover > *,
+  .img-slider-btn:focus-visible > * {
+    animation: squish 200ms ease-in-out;
   }
 }
