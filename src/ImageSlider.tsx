@@ -8,12 +8,12 @@ type ImageSliderProps = {
 export const ImageSlider = ({ imageUrls }: ImageSliderProps) => {
   const [imageIndex, setImageIndex] = useState(0);
   return (
-    <div style={{ width: '100%', height: '100%' }}>
+    <div style={{ width: '100%', height: '100%', position: 'relative' }}>
       <img src={imageUrls[imageIndex]} className='img-slider-img' />
-      <button>
+      <button className='img-slider-btn'>
         <ArrowBigLeft />
       </button>
-      <button>
+      <button className='img-slider-btn'>
         <ArrowBigRight />
       </button>
     </div>
